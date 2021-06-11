@@ -36,7 +36,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
             ViewDataBinding::class.java.isAssignableFrom(cls) && cls != ViewDataBinding::class.java
             if (layoutId() == 0) throw IllegalArgumentException("Using DataBinding requires overriding method layoutId")
             mBinding = DataBindingUtil.setContentView(this, layoutId())
-            (mBinding as ViewDataBinding).lifecycleOwner = this
+            mBinding.lifecycleOwner = this
         } else throw IllegalArgumentException("Generic error")
     }
 
