@@ -14,13 +14,14 @@ import java.lang.reflect.Type
  * Created by puy on 2021/6/11 15:22
  */
 abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompatActivity() {
-
+    protected lateinit var mViewModel: VM
     protected lateinit var mBinding: DB
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewDataBinding()
-        initViewMode()
+        mViewModel = initViewMode()
+        lifecycle.addObserver(mViewModel)
         initView(savedInstanceState)
         initData()
     }
@@ -43,7 +44,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
     abstract fun layoutId(): Int
 
     //初始化viewModel
-    abstract fun initViewMode()
+    abstract fun initViewMode(): VM
 
     //初试化UI相关
     abstract fun initView(savedInstanceState: Bundle?)
@@ -51,7 +52,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
     //初始化数据相关
     abstract fun initData()
 
-    protected fun <VM : ViewModel?> getViewModel(owner: ViewModelStoreOwner, viewModelClass: Class<VM>): VM? {
-        return ViewModelProvider(owner)[viewModelClass]
+    protected fun <VM : ViewModel?> getViewModel(viewModelClass: Class<VM>): VM? {
+        return ViewModelProvider(this)[viewModelClass]
     }
 }

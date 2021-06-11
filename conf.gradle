@@ -10,7 +10,7 @@ ext {
             versionName      : '1.0.0',
     ]
     dependencies = [
-            "butterknife"                : "com.jakewharton:butterknife:10.1.0",
+            "butterknife": "com.jakewharton:butterknife:10.1.0",
     ]
 
 }

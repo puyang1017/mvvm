@@ -7,12 +7,10 @@ import com.android.puy.mvvm.base.BaseActivity
 import com.android.puy.puymvvm.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
-    private var mViewModel: MainViewModel? = null
-
     override fun layoutId() = R.layout.activity_main
 
-    override fun initViewMode() {
-        mViewModel = getViewModel(this, MainViewModel::class.java)
+    override fun initViewMode(): MainViewModel {
+        return getViewModel(MainViewModel::class.java)!!
     }
 
     override fun initView(savedInstanceState: Bundle?) {
