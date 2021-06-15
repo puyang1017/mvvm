@@ -10,7 +10,18 @@ ext {
             versionName      : '1.0.0',
     ]
     dependencies = [
-            "butterknife": "com.jakewharton:butterknife:10.1.0",
+            "eventbus"       : "org.greenrobot:eventbus:3.0.0",
+            "fragmentation"  : 'com.github.puyang1017:Fragmentation:2.0.0',
+            "umsdkCommon"    : 'com.umeng.umsdk:common:9.3.8',
+            "immersionbar"   : "com.gyf.immersionbar:immersionbar:3.0.0",
+            "rxpermissions"  : "com.github.tbruyelle:rxpermissions:0.10.2",
+            "rxandroid"      : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            "rxjava"         : "io.reactivex.rxjava2:rxjava:2.2.3",
+            "swipebacklayout": 'me.imid.swipebacklayout.lib:library:1.1.0',
+            "coil"           : 'io.coil-kt:coil:1.1.1',
+            "coil-gif"       : 'io.coil-kt:coil-gif:1.1.1',
+            "coil-svg"       : 'io.coil-kt:coil-svg:1.1.1',
+            "coil-video"     : 'io.coil-kt:coil-video:1.1.1',
     ]
 
 }
