@@ -104,6 +104,7 @@ abstract class XFragmentation<VM : XViewModel, DB : ViewDataBinding> : SupportFr
         return ViewModelProvider(this)[viewModelClass]
     }
 
+    //沉浸式状态栏
     open fun initStatusBar(id: Int) {
         mImmersionBar = ImmersionBar.with(this)
         mImmersionBar.titleBar(id)
@@ -128,6 +129,12 @@ abstract class XFragmentation<VM : XViewModel, DB : ViewDataBinding> : SupportFr
         mImmersionBar.init()
     }
 
+    //权限请求
+    open fun getRxPermissions(): RxPermissions {
+        rxPermissions = RxPermissions(this)
+        return rxPermissions!!
+    }
+
     //是否使用eventBus
     open fun useEventBus(): Boolean {
         return false
@@ -136,11 +143,5 @@ abstract class XFragmentation<VM : XViewModel, DB : ViewDataBinding> : SupportFr
     //是否使用友盟统计 默认开启
     open fun useUmeng(): Boolean {
         return true
-    }
-
-
-    open fun getRxPermissions(): RxPermissions? {
-        rxPermissions = RxPermissions(this)
-        return rxPermissions
     }
 }

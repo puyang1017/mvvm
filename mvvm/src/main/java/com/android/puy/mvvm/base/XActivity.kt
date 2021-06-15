@@ -84,6 +84,7 @@ abstract class XActivity<VM : XViewModel, DB : ViewDataBinding> : AppCompatActiv
         return ViewModelProvider(this)[viewModelClass]
     }
 
+    //沉浸式状态栏
     open fun initStatusBar(id: Int) {
         mImmersionBar = ImmersionBar.with(this)
         mImmersionBar.titleBar(id)
@@ -108,9 +109,10 @@ abstract class XActivity<VM : XViewModel, DB : ViewDataBinding> : AppCompatActiv
         mImmersionBar.init()
     }
 
-    open fun getRxPermissions(): RxPermissions? {
+    //权限请求
+    open fun getRxPermissions(): RxPermissions {
         rxPermissions = RxPermissions(this)
-        return rxPermissions
+        return rxPermissions!!
     }
 
     //是否使用eventBus

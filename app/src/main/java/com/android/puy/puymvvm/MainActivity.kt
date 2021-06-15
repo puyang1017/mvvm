@@ -1,15 +1,16 @@
 package com.android.puy.puymvvm
 
+import android.Manifest
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.android.puy.mvvm.base.XFragmentationActivity
-import com.android.puy.mvvm.router.Router
 import com.android.puy.puymvvm.databinding.ActivityMainBinding
 import com.android.puy.puymvvm.fragments.FragmentPager
 import com.android.puy.puymvvm.fragments.PageOne
 import com.android.puy.puymvvm.fragments.PageTwo
+import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : XFragmentationActivity<MainViewModel, ActivityMainBinding>() {
