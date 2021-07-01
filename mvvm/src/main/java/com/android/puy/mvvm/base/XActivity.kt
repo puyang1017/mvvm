@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.puy.mvvm.router.AppManager
 import com.gyf.immersionbar.ImmersionBar
 import com.tbruyelle.rxpermissions2.RxPermissions
-import com.umeng.analytics.MobclickAgent
 import org.greenrobot.eventbus.EventBus
 import java.lang.reflect.ParameterizedType
 
@@ -38,12 +37,12 @@ abstract class XActivity<VM : XViewModel, DB : ViewDataBinding> : AppCompatActiv
 
     override fun onResume() {
         super.onResume()
-        if (useUmeng()) MobclickAgent.onResume(this)
+//        if (useUmeng()) MobclickAgent.onResume(this)
     }
 
     override fun onPause() {
         super.onPause()
-        if (useUmeng()) MobclickAgent.onPause(this)
+//        if (useUmeng()) MobclickAgent.onPause(this)
     }
 
     override fun onDestroy() {

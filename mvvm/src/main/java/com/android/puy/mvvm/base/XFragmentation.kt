@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.gyf.immersionbar.ImmersionBar
 import com.tbruyelle.rxpermissions2.RxPermissions
-import com.umeng.analytics.MobclickAgent
 import me.yokeyword.fragmentation.SupportFragment
 import org.greenrobot.eventbus.EventBus
 import java.lang.reflect.ParameterizedType
@@ -49,12 +48,12 @@ abstract class XFragmentation<VM : XViewModel, DB : ViewDataBinding> : SupportFr
 
     override fun onResume() {
         super.onResume()
-        if (useUmeng()) MobclickAgent.onPageStart(context.packageName)
+//        if (useUmeng()) MobclickAgent.onPageStart(context.packageName)
     }
 
     override fun onPause() {
         super.onPause()
-        if (useUmeng()) MobclickAgent.onPageEnd(context.packageName)
+//        if (useUmeng()) MobclickAgent.onPageEnd(context.packageName)
     }
 
     override fun onSupportVisible() {

@@ -61,7 +61,7 @@ dependencies {
     //三方sdk
     api rootProject.ext.dependencies["fragmentation"]
     api rootProject.ext.dependencies["eventbus"]
-    api rootProject.ext.dependencies["umsdkCommon"]
+//    api rootProject.ext.dependencies["umsdkCommon"]
     api rootProject.ext.dependencies["immersionbar"]
     api rootProject.ext.dependencies["rxpermissions"]
     api rootProject.ext.dependencies["rxandroid"]
