@@ -3,7 +3,7 @@ package com.android.puy.puymvvm.fragments
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import com.android.puy.mvvm.base.XViewModel
-import com.android.puy.puymvvm.UserBean
+import com.android.puy.puymvvm.beans.UserBean
 
 /**
  * Created by puy on 2021/6/15 16:32

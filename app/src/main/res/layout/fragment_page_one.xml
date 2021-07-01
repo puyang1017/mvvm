@@ -6,7 +6,7 @@
 
         <variable
             name="userBean"
-            type="com.android.puy.puymvvm.UserBean" />
+            type="com.android.puy.puymvvm.beans.UserBean" />
     </data>
 
     <RelativeLayout
